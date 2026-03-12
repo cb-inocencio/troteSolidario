@@ -70,3 +70,10 @@ body {
     font-style: italic;
     color: #ff9100;
 }
+
+.principal {
+    max-width: 900px;
+    margin: -40px auto 40px; /* EM CIMA, EM BAIXO, AMBOS OS LADOS */
+    padding: 20px;
+    
+}
