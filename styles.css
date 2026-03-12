@@ -30,3 +30,43 @@ body {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+
+.lista {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.lista a {
+    color: #cBDCF7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    /* 1 rem vale 16 px */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.lista a:hover {
+    color: #fff;
+}
+
+.cabecalho {
+    background-color: #2e4c82;
+    color: white;
+    padding: 60px 20px;
+    /* ESPAÇAMENTO INTERNO, EM CIMA E EMBAIXO, DIREITA E ESQUERDA */
+    text-align: center;
+}
+
+.cabecalho h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.cabecalho h2 {
+    font-weight: 300;
+    font-style: italic;
+    color: #ff9100;
+}
