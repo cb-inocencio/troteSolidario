@@ -138,6 +138,7 @@ th, td {
 }
 th {
     background-color: #2a5298; 
+    color: #fff;
 }
 .box-amarela {
     width: 25px;
@@ -145,4 +146,41 @@ th {
     border-radius: 4px;
     background: yellow;
     border: 2px solid #b3b1b1;
+}
+.lista-alimentos {
+    border: 3px dashed orange;
+    list-style: none;
+    padding: 35px 15px;
+    background-color: #f9f9e3;
+    border-radius: 10px;
+    line-height: 2;
+
+}
+.lista-alimentos li {
+    color: #975600;
+}
+.suplementos {
+    flex: 1;
+    background: #ffefef;
+    padding: 15px;
+    border-left: 5px solid #ff4444;
+    border-radius: 8px;
+}
+.texto-atencao {
+    color: #975600;
+}
+.memoria-acao {
+    flex: 1;
+    background: #fdffef;
+    padding: 15px;
+    border-left: 5px solid #e6ea00;
+    border-radius: 8px;
+}
+.rodape {
+    background-color: #2e4c82;
+    color: white;
+    padding: 25px 20px;
+    /* ESPAÇAMENTO INTERNO, EM CIMA E EMBAIXO, DIREITA E ESQUERDA */
+    text-align: center;
+    border-top: 3px solid yellow;
 }
