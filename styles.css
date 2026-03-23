@@ -144,8 +144,64 @@ th {
     width: 25px;
     height: 25px;
     border-radius: 4px;
-    background: yellow;
-    border: 2px solid #b3b1b1;
+    background: #ffff00;
+    border: 2px solid #313131;
+}
+.box-cinza {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #b7b7b7;
+    border: 2px solid #313131;
+}
+.box-laranja {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #ff8915;
+    border: 2px solid #313131;
+}
+.box-marrom {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #cc3300;
+    border: 2px solid #313131;
+}
+.box-preta {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #000000;
+    border: 2px solid #313131;
+}
+.box-rosa {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #ff33cc;
+    border: 2px solid #313131;
+}
+.box-roxa {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #6f2f9f;
+    border: 2px solid #313131;
+}
+.box-verde {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #00ff00;
+    border: 2px solid #313131;
+}
+.box-vermelha {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background: #ff0000;
+    border: 2px solid #313131;
 }
 .lista-alimentos {
     border: 3px dashed orange;
