@@ -140,6 +140,9 @@ th {
     background-color: #2a5298; 
     color: #fff;
 }
+tr:hover {
+    background-color: #f9f9f9;
+}
 .box-amarela {
     width: 25px;
     height: 25px;
@@ -204,16 +207,15 @@ th {
     border: 2px solid #313131;
 }
 .lista-alimentos {
-    border: 3px dashed orange;
+    border: 3px dashed #ffc107;
     list-style: none;
     padding: 35px 15px;
-    background-color: #f9f9e3;
+    background-color: #fff8e1;
     border-radius: 10px;
     line-height: 2;
-
 }
 .lista-alimentos li {
-    color: #975600;
+    color: #856404;
 }
 .suplementos {
     flex: 1;
@@ -223,7 +225,7 @@ th {
     border-radius: 8px;
 }
 .texto-atencao {
-    color: #975600;
+    color: #856404;
 }
 .memoria-acao {
     flex: 1;
@@ -233,10 +235,14 @@ th {
     border-radius: 8px;
 }
 .rodape {
-    background-color: #2e4c82;
+    background-color: #1e3c72;
     color: white;
-    padding: 25px 20px;
-    /* ESPAÇAMENTO INTERNO, EM CIMA E EMBAIXO, DIREITA E ESQUERDA */
+    padding: 30px 20px;
     text-align: center;
-    border-top: 3px solid yellow;
+    border-top: 3px solid #ffd700;
+    margin-top: 50px;
+    font-size: 0.85rem;
+}
+.rodape p {
+    margin: 8px 0;
 }
