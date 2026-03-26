@@ -246,3 +246,37 @@ tr:hover {
 .rodape p {
     margin: 8px 0;
 }
+.evento {
+    margin-bottom: 25px;
+    position: relative; /* MOVE O ELEMENTO EM ALTERAR OS ELEMENTOS AO LADO // "FLUTUANTE" */
+}
+.evento::before { /* CRIA UM ELEMENTO FANTASMA -- PRIMEIRO ELEMENTO */
+    content: ' '; /* MODO ARQUITETO :P */
+    width: 12px; /* LARGURA BOLA */
+    height: 12px; /* ALTURA BOLA */
+    background: #ff4b2b; /* COR BOLA */
+    border-radius: 50%; /* BORDA DA BOLINHA */
+    position: absolute; /* POSICAO ATUAL DO ELEMENTO */
+    left: -28px; /* DESLOCAMENTO A ESQUERDA */
+    top: 5px; /* DESLOCAMENTO PARA CIMA */
+}
+.timeline {
+    border-left: 3px solid #2a5298;
+    padding: 20px;
+    margin-top: 20px;
+}
+.grid-locais {
+    display: flex;
+    gap: 20px;
+}
+.unidade {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+.unidade h4 {
+    color: #2a5298;
+    margin-top: 0;
+}
