@@ -280,3 +280,20 @@ tr:hover {
     color: #2a5298;
     margin-top: 0;
 }
+.provas {
+    flex: 5;
+    background: #d3e3fb;
+    padding: 15px;
+    border-left: 5px solid #2a5298;
+    border-radius: 8px;
+    
+}
+.lista-gincana {
+    color: #856404;
+    list-style: none;
+    padding: 0;
+    text-align: top;
+}
+.lista-gincana li{
+    margin: 10px;
+}
