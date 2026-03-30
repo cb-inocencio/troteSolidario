@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trote Solidário</title>
+        <link rel="Stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="menu"> <!-- MENU DE NAVEGAÇÃO -->
+            <div class="menu-container">
+                <a href="index.html" class="menu-logo">Trote 2026</a>
+                <ul class="lista">
+                    <li> <a href="index.html">Início</a> </li>
+                    <li> <a href="introducao.html">Introdução</a> </li>
+                    <li> <a href="formato.html">Formato</a> </li>
+                    <li> <a href="equipes.html">Equipes</a> </li>
+                    <li> <a href="provas.html">Provas e Metas</a> </li>
+                    <li> <a href="integracao.html">Integração</a> </li>
+                    <li> <a href="cronogramas.html">Cronograma</a> </li>
+                    <li> <a href="calculadora.html">Calculadora</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="principal">
+            <section class="calculadora">
+                <h3> 🧮 Simulador de Pontos: Kit Alimentação</h3>
+                <p>
+                    Insira a quantidade de itens arrecadados para calculara pontuação total da equipe.
+                </p>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Arroz (5kg) - 10 pts</label> <!-- ROTULO -->
+                        <input type="number" id="qtdeArroz" min="0"> <!-- CAIXA DE TEXTO -->
+                    </div>
+                    <div class="form-group">
+                        <label>Feijão (2kg) - 8 pts</label> <!-- ROTULO -->
+                        <input type="number" id="qtdeFeijao" min="0"> <!-- CAIXA DE TEXTO -->
+                    </div>
+                </div>
+                <button onclick="calcular()">Calcular Total da Equipe</button> <!-- QUANDO CLICADO EXECUTA A FUNÇÃO CALCULAR -->
+                <div id="resultado" class="resultado-box">
+                    Pontuação total: 0 pontos
+                </div>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br</p>
+            <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
+        </footer>
+
+        <!-- JAVASCRIPT -->
+        <script> 
+            function calcular(){
+                // JS É UMA LINGUAGEM NAO TIPADA, OU SEJA SEM TIPO DE DADOS
+                // let --> DECLARA VARIAVEL EM JAVASCRIPT 
+                let qtdeArroz = Number(document.getElementById("qtdeArroz").value) //recupera valor informado no input
+                let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value) // Number = Converte o texto recebido para número!
+                // CALCULA O VALOR TOTAL DE PONTOS
+                let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8)
+                // EXIBI O RESULTADO PARA O USUÁRIO
+                document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
+            }
+        </script>
+    </body>
+</html>
