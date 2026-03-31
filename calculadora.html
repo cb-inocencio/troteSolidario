@@ -36,6 +36,14 @@
                         <label>Feijão (2kg) - 8 pts</label> <!-- ROTULO -->
                         <input type="number" id="qtdeFeijao" min="0"> <!-- CAIXA DE TEXTO -->
                     </div>
+                    <div class="form-group">
+                        <label>Óleo (unidade) - 4 pts</label> <!-- ROTULO -->
+                        <input type="number" id="qtdeOleo" min="0"> <!-- CAIXA DE TEXTO -->
+                    </div>
+                    <div class="form-group">
+                        <label>Macarrão (unidade) - 2 pts</label> <!-- ROTULO -->
+                        <input type="number" id="qtdeMacarrao" min="0"> <!-- CAIXA DE TEXTO -->
+                    </div>
                 </div>
                 <button onclick="calcular()">Calcular Total da Equipe</button> <!-- QUANDO CLICADO EXECUTA A FUNÇÃO CALCULAR -->
                 <div id="resultado" class="resultado-box">
@@ -55,8 +63,10 @@
                 // let --> DECLARA VARIAVEL EM JAVASCRIPT 
                 let qtdeArroz = Number(document.getElementById("qtdeArroz").value) //recupera valor informado no input
                 let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value) // Number = Converte o texto recebido para número!
+                let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
+                let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
                 // CALCULA O VALOR TOTAL DE PONTOS
-                let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8)
+                let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 4) + (qtdeMacarrao * 2)
                 // EXIBI O RESULTADO PARA O USUÁRIO
                 document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
             }
