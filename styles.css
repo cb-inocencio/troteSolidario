@@ -291,8 +291,8 @@ tr:hover {
 .lista-gincana {
     color: #856404;
     list-style: none;
-    padding: 0;
-    text-align: top;
+    padding: 0px;
+    margin-left: -15px;
 }
 .lista-gincana li{
     margin: 10px;
