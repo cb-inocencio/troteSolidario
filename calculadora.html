@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Trote Solidário</title>
         <link rel="Stylesheet" href="styles.css">
+        <script src="scripts.js"> </script>
     </head>
     <body>
         <nav class="menu"> <!-- MENU DE NAVEGAÇÃO -->
@@ -22,8 +23,27 @@
             </div>
         </nav>
         <main class="principal">
-            <section class="calculadora">
-                <h3> 🧮 Simulador de Pontos: Kit Alimentação</h3>
+            <section>
+                <h3> Simulador de Metas Batidas</h3>
+                <div class="form-group">
+                    <label>Kit de Alimentação (60 Kits)</label> <!-- ROTULO -->
+                    <input type="number" id="kitAlimentacao" min="0"> <!-- CAIXA DE TEXTO -->
+                </div>
+                <div class="form-group">
+                    <label>Suplemento (30 Latas)</label> <!-- ROTULO -->
+                    <input type="number" id="qtdeLatas" min="0"> <!-- CAIXA DE TEXTO -->
+                </div>
+                <div class="form-group">
+                    <label>Leite (60 unidades)</label> <!-- ROTULO -->
+                    <input type="number" id="qtdeLeite" min="0"> <!-- CAIXA DE TEXTO -->
+                </div>
+                <div class="form-group">
+                    <label>Doação de sangue (30 doações)</label> <!-- ROTULO -->
+                    <input type="number" id="qtdeDoacoes" min="0"> <!-- CAIXA DE TEXTO -->
+                </div>
+            </section>
+            <section>
+                <h3> 🧮 Simulador de Pontos: Itens Avulsos</h3>
                 <p>
                     Insira a quantidade de itens arrecadados para calculara pontuação total da equipe.
                 </p>
@@ -36,15 +56,17 @@
                         <label>Feijão (2kg) - 8 pts</label> <!-- ROTULO -->
                         <input type="number" id="qtdeFeijao" min="0"> <!-- CAIXA DE TEXTO -->
                     </div>
-                    <div class="form-group">
-                        <label>Óleo (unidade) - 4 pts</label> <!-- ROTULO -->
+                    <div class="form-group"> <!-- MIN = VALOR MINIMO PARA SER  COLOCADO NA VARIAVEL -->
+                        <label>Óleo de Soja (Unidade - 900ml) - 4 pts</label> <!-- ROTULO -->
                         <input type="number" id="qtdeOleo" min="0"> <!-- CAIXA DE TEXTO -->
                     </div>
                     <div class="form-group">
-                        <label>Macarrão (unidade) - 2 pts</label> <!-- ROTULO -->
+                        <label>Macarrão (Unidade - 500g) - 2 pts</label> <!-- ROTULO -->
                         <input type="number" id="qtdeMacarrao" min="0"> <!-- CAIXA DE TEXTO -->
                     </div>
                 </div>
+            </section>
+            <section>
                 <button onclick="calcular()">Calcular Total da Equipe</button> <!-- QUANDO CLICADO EXECUTA A FUNÇÃO CALCULAR -->
                 <div id="resultado" class="resultado-box">
                     Pontuação total: 0 pontos
@@ -56,20 +78,6 @@
             <p>Uni-FACEF - Centro Universitário Municipal de Franca</p>
         </footer>
 
-        <!-- JAVASCRIPT -->
-        <script> 
-            function calcular(){
-                // JS É UMA LINGUAGEM NAO TIPADA, OU SEJA SEM TIPO DE DADOS
-                // let --> DECLARA VARIAVEL EM JAVASCRIPT 
-                let qtdeArroz = Number(document.getElementById("qtdeArroz").value) //recupera valor informado no input
-                let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value) // Number = Converte o texto recebido para número!
-                let qtdeOleo = Number(document.getElementById("qtdeOleo").value)
-                let qtdeMacarrao = Number(document.getElementById("qtdeMacarrao").value)
-                // CALCULA O VALOR TOTAL DE PONTOS
-                let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 4) + (qtdeMacarrao * 2)
-                // EXIBI O RESULTADO PARA O USUÁRIO
-                document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
-            }
-        </script>
+        <!-- JAVASCRIPT // MOVIDO PARA ARQUIVO SEPARADO -->
     </body>
 </html>
