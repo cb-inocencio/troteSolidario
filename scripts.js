@@ -11,16 +11,34 @@ function calcular(){
     // CALCULA O VALOR TOTAL DE PONTOS
     let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 4) + (qtdeMacarrao * 2)
 
+    let cor = document.getElementById("cor").value
+    let metaProva1 
+    if (cor == "amarela") {
+        metaProva1 = 54
+    } 
+    else if (cor == "cinza") {
+        metaProva1 == 51
+    } 
+    else if (cor == "laranja"){
+        metaprova1 == 21
+    }
+    else if (cor == "marrom") {
+        metaProva1 == 88
+    }
+    else if (cor == "preta") {
+        metaProva1 = 60
+    }
+
     let kitAlimentacao = Number(document.getElementById("kitAlimentacao").value)
-    if (kitAlimentacao >= 60) {
+    if (kitAlimentacao >= metaProva1) {
         pontos = pontos + 5000 // 5.000 PONTOS GARANTIDOS
-        if (kitAlimentacao > 60){ 
+        if (kitAlimentacao > metaProva1){ 
             // GANHAMOS 83.33 PONTOS POR KIT INDIVIDUAL
-            pontos = pontos + (kitAlimentacao - 60) * 83.33
+            pontos = pontos + (kitAlimentacao - metaProva1) * (5000/metaProva1)
         } 
     }
     else {
-        pontos = pontos + (kitAlimentacao * 83.33)
+        pontos = pontos + (kitAlimentacao * (5000/metaProva1))
     }
     // EXIBI O RESULTADO PARA O USUÁRIO
     document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
