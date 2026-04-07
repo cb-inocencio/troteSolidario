@@ -28,6 +28,18 @@ function calcular(){
     else if (cor == "preta") {
         metaProva1 = 60
     }
+    else if (cor == "rosa") {
+        metaProva1 = 44
+    }
+    else if (cor == "roxa") {
+        metaProva1 = 42
+    }
+    else if (cor == "verde") {
+        metaProva1 = 61
+    }
+    else if (cor == "vermelha") {
+        metaProva1 = 32
+    }
 
     let kitAlimentacao = Number(document.getElementById("kitAlimentacao").value)
     if (kitAlimentacao >= metaProva1) {
