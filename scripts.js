@@ -12,46 +12,99 @@ function calcular(){
     let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8) + (qtdeOleo * 4) + (qtdeMacarrao * 2)
 
     let cor = document.getElementById("cor").value
-    let metaProva1 
-    if (cor == "amarela") {
-        metaProva1 = 54
+    let metaKit 
+    if (cor == "amarela") { // COMUNICAÇÃO SOCIAL
+        metaKit = 54
     } 
-    else if (cor == "cinza") {
-        metaProva1 == 51
+    else if (cor == "cinza") { // PSICOLOGIA 
+        metaKit = 51
     } 
-    else if (cor == "laranja"){
-        metaprova1 == 21
+    else if (cor == "laranja"){ // LETRAS
+        metaKit = 21
     }
-    else if (cor == "marrom") {
-        metaProva1 == 88
+    else if (cor == "marrom") { // MEDICINA
+        metaKit = 88
     }
-    else if (cor == "preta") {
-        metaProva1 = 60
+    else if (cor == "preta") { // ENGENHARIA DE SOFTWARE
+        metaKit = 60
     }
-    else if (cor == "rosa") {
-        metaProva1 = 44
+    else if (cor == "rosa") { // CIÊNCIAS CONTÁBEIS
+        metaKit = 22
     }
-    else if (cor == "roxa") {
-        metaProva1 = 42
+    else if (cor == "roxa") { // ENGENHARIAS (CIVIL E PRODUÇÃO)
+        metaKit = 42
     }
-    else if (cor == "verde") {
-        metaProva1 = 61
+    else if (cor == "verde") { // CIENCIAS DA COMPUTACAO + SISTEMAS DE INFORMACAO
+        metaKit = 61
     }
-    else if (cor == "vermelha") {
-        metaProva1 = 32
+    else if (cor == "vermelha") { // ADMINISTRAÇÃO
+        metaKit = 32
     }
 
+    // CALCULA META DO SUPLEMENTO
+    let metaSuplemento
+    let metaLeite = metaKit 
+    if (metaKit % 2 == 0) {
+        metaSuplemento = (metaKit / 2)
+    }
+    else {
+        metaSuplemento = (metaKit / 2) + 1
+    }
+
+    // CALCULA META DA DOAÇÃO DE SANGUE
+    let metaSangue = metaSuplemento
+
+
+
+    // CALULA KIT ALIMENTAÇÃO
     let kitAlimentacao = Number(document.getElementById("kitAlimentacao").value)
-    if (kitAlimentacao >= metaProva1) {
+    if (kitAlimentacao >= metaKit) {
         pontos = pontos + 5000 // 5.000 PONTOS GARANTIDOS
-        if (kitAlimentacao > metaProva1){ 
+        if (kitAlimentacao > metaKit){ 
             // GANHAMOS 83.33 PONTOS POR KIT INDIVIDUAL
-            pontos = pontos + (kitAlimentacao - metaProva1) * (5000/metaProva1)
+            pontos = pontos + (kitAlimentacao - metaKit) * (5000/metaKit)
         } 
     }
     else {
-        pontos = pontos + (kitAlimentacao * (5000/metaProva1))
+        pontos = pontos + (kitAlimentacao * (5000/metaKit))
     }
+
+    // CALCULA PONTUAÇÃO DO SUPLEMENTO
+    let qtdeLatas = Number(document.getElementById("qtdeLatas").value)
+    if (qtdeLatas >= metaSuplemento) {
+        pontos = pontos + 5000
+        if (qtdeLatas > metaSuplemento) {
+            pontos = pontos + (qtdeLatas - metaSuplemento) * (5000/metaSuplemento)
+        }
+    }
+    else {
+        pontos = pontos + (qtdeLatas * (5000/metaSuplemento))
+    }
+
+    // CALCULA PONTUAÇÃO DO LEITE
+    let qtdeLeite = Number(document.getElementById("qtdeLeite").value)
+    if (qtdeLeite >= metaLeite) {
+        pontos = pontos + 5000
+        if (qtdeLeite > metaLeite) {
+            pontos = pontos + (qtdeLeite - metaLeite) * (5000/metaLeite)
+        }
+    }
+    else {
+        pontos = pontos + (qtdeLeite * (5000/metaLeite))
+    }
+
+    // CALCULA PONTUACAO DAS DOAÇÕES
+    let qtdeDoacoes = Number(document.getElementById("qtdeDoacoes").value)
+    if (qtdeDoacoes >= metaSangue) {
+        pontos = pontos + 5000
+        if (qtdeDoacoes > metaSangue) {
+            pontos = pontos + (qtdeDoacoes - metaSangue) * (5000/metaSangue)
+        }
+    }
+    else {
+        pontos = pontos + (qtdeDoacoes * (5000/metaSangue))
+    }
+
     // EXIBI O RESULTADO PARA O USUÁRIO
-    document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
+    document.getElementById("resultado").innerText = "Pontuação total: " + pontos.toFixed(2) + " pontos"
 }
