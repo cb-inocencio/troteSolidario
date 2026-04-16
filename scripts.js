@@ -48,7 +48,7 @@ function calcular(){
         metaSuplemento = (metaKit / 2)
     }
     else {
-        metaSuplemento = (metaKit / 2) + 1
+        metaSuplemento = (metaKit / 2) + 0.5
     }
 
     // CALCULA META DA DOAÇÃO DE SANGUE
